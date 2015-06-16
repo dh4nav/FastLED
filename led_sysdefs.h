@@ -16,9 +16,12 @@
 #include "platforms/arm/sam/led_sysdefs_arm_sam.h"
 #elif defined(STM32F10X_MD)
 #include "platforms/arm/stm32/led_sysdefs_arm_stm32.h"
-#else
-// AVR platforms
+#elif defined(ARDUINO)
+// AVR-Arduino platforms
 #include "platforms/avr/led_sysdefs_avr.h"
+#else
+// AVR-Nonarduino platorms
+#include "platforms/avr/led_sysdefs_avr_nonarduino.h"
 #endif
 
 #ifndef FASTLED_NAMESPACE_BEGIN
